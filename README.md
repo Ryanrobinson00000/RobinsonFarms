@@ -42,3 +42,5 @@ The requirements for functionality are as follows
     X About us page
     
     X Contact page
+    
+  x Must be authenticated
