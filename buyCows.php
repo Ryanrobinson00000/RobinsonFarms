@@ -12,38 +12,47 @@
     <style>img[alt="www.000webhost.com"]{display:none;}</style>
 </head>
 
-
-<body onload="start()">
     <!-- php -S localhost:4000-->
-    <!-- http://localhost:4000/Downloads/farmWebsite/buyCows1.php to test -->
+    <!-- http://localhost:4000/Downloads/farmWebsite/buyCows1.php to test locally -->
+
+<!--Performs start() when body is loaded -->
+<body onload="start()">
+
  
   
   <?php
 
-
+//includes header file
  include ("header.html");
 ?>
     <!-- php -S localhost:4000-->
     <!-- http://localhost:4000/Downloads/farmWebsite/buyCows1.php to test -->
 
+<!--sets page formating through id and performs clear on formatting to allow for proper formatting-->
 <div id="pageDiv".clear { clear: both; }>
     <?php
    
 
 
- 
+//adds buyCowInfo file which stores cow information 
  include ("buyCowsInfo.php");
 
+ //gets page number
 $page = basename($_SERVER['PHP_SELF']);
 $page = str_replace("buyCows","",$page);
 $page = str_replace(".php","",$page);
+
+//if there are no cows display that there are no cows
 if($numberCows==0)
 {
 echo "<h2> There are currently no cows/calves actively being sold at this time.<a href='contact.html'>Click here</a> for various methods of contacting us regarding our cattle.</h2>" ;
 }
+//if there are cows available, display those cows according to page numberx15
 else{
+  //loops for up to 15xpage number
  for ($x = 1+(($page-1)*15); $x <= $page*15; $x++)
  {
+   //performs cow addition if there is another cow
 if($x <=$numberCows)
  perform($x, $text, $cowTag, $cowId);
 
@@ -64,24 +73,26 @@ if($x <=$numberCows)
 
 
 
-
+  //adds cow information
     function perform($placement, $text, $tag, $idNum){
         
 
-    
+    //creates div for cow and formats with class
     $cowIdentification='<div class="img-with-text" id="cow';
+    //gets placement in file by modulating by max number of cows per page
     $cowIdentification .= $placement%15;
     $cowIdentification .= '">';
 echo $cowIdentification;
  
 
-     
+//gets corresponding cow image
  $a='<img src="img/cow';
  $a .= $idNum[$placement];
  $a .= '.jpg">';
  
 echo $a;
 
+//sets cow information/text
 echo '<div>';
 echo '<p>';
 echo $text[$placement];
@@ -92,14 +103,10 @@ echo '</p>';
 
 
 echo '<br>';
+//sets cow's add/remove button to match its number
 $buttonSetter='<button id="cow';
 $buttonSetter .= $idNum[$placement];
 $buttonSetter .= 'Button" type="button" onclick="addToList(this.id); add(this.id); ">';
-//$buttonSetter .=$idNum[$placement];
-
-
-
-
 $buttonSetter .='Add</button>';
 echo $buttonSetter;
 
@@ -112,6 +119,7 @@ $buttonCheck= "cow";
 $buttonCheck .= $idNum[$placement];
 $buttonCheck .= 'Button';
 
+//tracks array of cows chosen and removed from chosen list using local storage
 echo '<script>
 var cowsChosenArray = JSON.parse(localStorage.getItem("cowsChosenArray")) || [];
 var length=0;
@@ -128,14 +136,7 @@ document.getElementById("'; echo $buttonCheck; echo'").innerHTML="Remove";
 
 
   ?>
-<!--<p id="hello"><script>
-    var cowsChosenArray = JSON.parse(localStorage.getItem('cowsChosenArray')) || [];
 
-for(var k in cowsChosenArray) if(cowsChosenArray.hasOwnProperty(k)) {
-  document.getElementById("hello").innerHTML=  document.getElementById("hello").innerHTML + cowsChosenArray[k]; 
-}
-</script></p>  -->
-   <!--close allcows div-->
 
 
 
@@ -151,37 +152,37 @@ for(var k in cowsChosenArray) if(cowsChosenArray.hasOwnProperty(k)) {
 <script>
 //////////////////////////////////////////////////////////////////////////////
 
+//performs setPageNumber when body opens
 function start()
 {
   setPageNum();
 }
 
-
+//performs addition/removal to/from list
 function addToList(clicked_id)
 {
+  //gets clicked id of button
   var cowChosen= clicked_id.toString();
+  //gets list of cows chosen
     var cowsChosenArray = JSON.parse(localStorage.getItem('cowsChosenArray')) || [];
 
 
- 
+  // if cow is to be added add cow
   if(document.getElementById(clicked_id.toString()).innerHTML !="Remove")
     {
-
-
- 
-
-
+  //add cow to array
   cowsChosenArray.push(cowChosen);
-
+  //set local storage for cowsChosenArray
   localStorage.setItem('cowsChosenArray', JSON.stringify(cowsChosenArray));
-
+//sets length to 0, will be used in for loop below
  var length = 0;
 
- //will likely be able to add without this for loop, will likely just be used for verification
 
     }
+    //performs if removal is to occur
 else{
   const index = cowsChosenArray.indexOf(clicked_id.toString());
+  //if there is a cow selected, remove that cow using splice and add updated to localstorage
   if (index > -1) {
     cowsChosenArray.splice(index, 1);
     localStorage.setItem('cowsChosenArray', JSON.stringify(cowsChosenArray));
@@ -225,16 +226,20 @@ function add(clicked_id)
 <footer>
 <?php
 
-
+//adds file that determines total number of catalog pages
 include ("oneOfX.php");
+//centers buttons
 echo '<div id="centerButtons">';
+//makes removeall button
 echo '<button type="button" id="remove" onclick="removeAll(this.id)">Remove All</button>';
+//adds button to go to email page
 echo '<button><a href="email.php">Get Info on Selected Cows</a href></button>';
 echo '</div>';
 ?>
 
 </footer>
 <script>
+  //removes all cows selected from list of cows selected and updates to localstorage
   function removeAll()
     {
    
