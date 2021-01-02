@@ -1,6 +1,7 @@
 <?php
+//removes watermark
 
-//include ("index.html");
+include ("index.html");
 //performs if submission is sent from email page
     if(isset($_POST['submit'])){
 //sends email to Robinson Farms
