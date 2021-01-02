@@ -1,3 +1,4 @@
+/*gets meriweather fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
@@ -17,77 +18,89 @@ body{
 }
 
 
-/*Founders text*/
+/* keeps image proper width and height*/
 .img-with-text img{
 width: 29vw;
 height: auto;
 
   }
+  /*modifies text corresponding with image modified above */
   .img-with-text{
     text-align: center;
     border: green 3px solid;
     background-color: white;
     padding-bottom: 10%;
   }
-.caption{
- 
-  text-align: center;
 
-}
+
 
 /************************************************/
-
+/*sets up page in grid style to ensure 3xY column format*/
 #pageDiv{
   
     display: grid;
   
     gap: 10px; 
 }
+
+/*sets contact panel*/
 #contactPanel{
   text-align: center;  
   height:auto; 
+  /*makes element column 1*/
   grid-column: 1;
   grid-row: 1;
 }
+/*sets facebook panel*/
 #facebookPanel{
   text-align: center;  
   height:auto; 
+  /*makes column 2*/
   grid-column: 2;
   grid-row: 1;
 }
+/*sets phone number panel in contacts*/
 #phoneNumberPanel
 {
   
   text-align: center;  
-  height:auto; 
+  height:auto;
+  /*makes column 3*/ 
   grid-column: 3;
   grid-row: 1;
 }
+/*sets as column 1*/
 #col1 {
   grid-column: 1;
   grid-row: 1;
 }
+/*sets as column 2*/
 #col2 {
   grid-column: 2;
   grid-row: 1;
 }
+/*sets as column 3*/
 #col3{
   grid-column: 3;
   grid-row: 1;
 }
+
+/*sets as column 1 for buycows*/
 #cow1 {
     grid-column: 1;
     grid-row: 1;
   }
+/*sets as column 2 for buycows*/
 #cow2 {
     grid-column: 2;
     grid-row: 1;
   }
+/*sets as column 3 for buycows*/
 #cow3{
     grid-column: 3;
     grid-row: 1;
 }
-
+/*modifies all list elements to have border and to be displayed one by another*/
 li {
    list-style: none;
   float: left;
@@ -100,88 +113,53 @@ li {
     text-align: center;  
      height:auto; 
 }
-
+/*makes selected have a lightgreen background*/
 .selected{
   background-color: lightgreen;
 }
-
+/*a visisted link has a green background*/
 a:visited{
   color: green;
 }
+/*an univistied link has a purple background*/
 a:link {
-  color: green;
+  color:#8733f7;
+  ;
 }
-
+/*hovering over an a list element makes its bckkground silver*/
 li:hover{
   background-color: silver;
 }
 
 
-
+/*maeks footers background color gray/black and its textcolor white*/
 footer{
   background-color: #333;
   color: white;
   
 }
-
+/*centers information in div and makes background white*/
 #centerInfo{
   background-color:#f0fff4;
   margin-left: auto;
   margin-right: auto;
- 
- 
-
-
   display: flex;
   justify-content: center;
 }
 
-#navigationBar{
-  display:flex;
-  justify-content: stretch ;
 
-  font-weight: bold;
-  /* puts nav bar margin at top of page*/
-    margin-bottom: 10px;
-    margin-top: -60px;
-    margin-left: -10px;
-
-    
-    background-color: #333;
-    height:3.3em;
-    padding-right: 100%;
-      font-family: 'Merriweather', serif;
-    position:fixed;
-    
-}
-
+/*sets background of important button on homepage to encourage user to look at catalog*/
 #homeRequestButton{
   background-color: #9191ee;
    color:white;
 }
+/*makes that background more vigrantly purple when the user highlights the button*/
 #homeRequestButton:hover{
   background-color: purple;
 }
-#robinsonTitle{
-  background: url(img/homepagePic1.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    
-   
-  }
 
-  #bg {
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
-  }
+
+/*gives the title on homepage proper formatting*/
 #robinsonTitle>h1{
   background-color: white;
   margin-left: 10%;
@@ -189,16 +167,7 @@ footer{
   border: black 2px solid;
 }
 
-#aboutUsTitle{
-  background: url(img/aboutUs2.JPG) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
+/*aesthetically formats about us title */
 #aboutUsTitle>h1{
   background-color: white;
   justify-content: center; 
@@ -207,54 +176,147 @@ footer{
   padding: 5% 5% 5% 5%;
 }
 
+/*centers buttons*/
 #centerButtons{
   display: flex;
   justify-content: center;
  
 }
+/*changes company name at navbar lightgreen with a gray/black background*/
 #companyName{
   color: lightgreen;
   background-color:  #333;
   
 }
-
+/*makes element hidden*/
 .hidden{
   visibility:hidden;
 }
+/*makes h1 fonts darkgreen and meriweather*/
 h1{
   color:darkgreen;
   font-family: 'Merriweather', serif;
 }
+/*makes h2 meriweather*/
 h2{
   font-family: 'Merriweather', serif;
 }
+/*makes h3 meriweather*/
 h3{
   font-family: 'Merriweather', serif;
 }
+/*makes h4 meriweather*/
 h4{
   font-family: 'Merriweather', serif;
 }
+/*makes h5 meriweather*/
 h5{
   font-family: 'Merriweather', serif;
 }
-
+/*make all other text roboto such as p*/
 *{
   font-family: 'Roboto', sans-serif;
 
 }
 
+/*makes outer container for image*/
 #container{
   width: 100%;
   overflow: hidden;
 }
+/*floats inner div in outer div left and takes up a little over half of the screen*/
 #floatedLeft{
   float: left;
   width: 55%;
   margin-right: 5%;
 }
+/*ensures image doesnt scale too large and makes a border for image*/
 #leftPicture{
   max-width: 100%;
   max-height: 100%;
   border: 3px darkgreen solid;
   
+}
+
+/*performs only when media isnt small enough to be mobile*/
+@media only screen and (min-width: 600px) {
+  /*modifies nav bar to be horizontally aligned*/
+  #navigationBar{
+    display:flex;
+    justify-content: stretch ;
+    font-weight: bold;
+    /* puts nav bar margin at top of page*/
+      margin-bottom: 10px;
+      margin-top: -60px;
+      margin-left: -10px;
+      
+      background-color: #333;
+      height:3.3em;
+      padding-right: 100%;
+        font-family: 'Merriweather', serif;
+       /*keeps screen orientation of navbar*/ 
+      position:fixed;
+      
+  }
+  /*makes homepage title picture the background if lareg enough to take advantage aka not being mobile*/
+  #robinsonTitle{
+    background: url(img/homepagePic1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;   
+   }
+   /*makes regular image invisible if background image is able to be used instead*/
+   #imageToggleWidth{
+     display: none;
+   }
+  /*makes about us title picture the background if lareg enough to take advantage aka not being mobile*/
+  #aboutUsTitle{
+    background: url(img/aboutUs2.JPG) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+  /*performs if screen size is small enough to be mobile*/
+
+@media only screen and (max-width: 599px) {
+  /*make navigation bar vertically aligned*/
+  #navigationBar{
+    display:vertical;
+    justify-content: stretch ;
+    font-weight: bold;
+      height:3.3em;
+        font-family: 'Merriweather', serif;
+       margin-bottom: 175px;
+       margin-right:  50px;
+  }
+
+  /*makes navbar header visually appealing with a proper width and is high enough to discourage improper button presses*/
+  #header
+  {
+  
+    width: 100%;
+    height: 40%;
+
+   
+  }
+
+    /*makes navbar elements visually appealing with a proper width and is high enough to discourage improper button presses*/
+
+  #companyName{
+    width: 100%;
+    height: 40%;
+
+  }
+  
+
 }
