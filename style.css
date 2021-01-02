@@ -169,11 +169,19 @@ footer{
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
-    display: flex;
-    align-items: center;
+    
+   
   }
 
-
+  #bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
 #robinsonTitle>h1{
   background-color: white;
   margin-left: 10%;
