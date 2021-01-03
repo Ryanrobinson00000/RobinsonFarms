@@ -22,22 +22,23 @@ array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
 array_push($cowId,$counter);
 array_push($cowTag,"Red1 Cherry Hill");
 
-  
-$counter="1";
+$counter="2";
 array_push($image,"cow$counter.jpg");
 array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
 array_push($cowId,$counter);
-array_push($cowTag,"Blue2 Cherry Hill");
+array_push($cowTag,"Red1 Cherry Hill");  
 
-
-$counter="1";
+$counter="3";
 array_push($image,"cow$counter.jpg");
 array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
 array_push($cowId,$counter);
-array_push($cowTag,"green3 Cherry Hill");
+array_push($cowTag,"Red1 Cherry Hill");
 
-
-
+$counter="4";
+array_push($image,"cow$counter.jpg");
+array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+array_push($cowId,$counter);
+array_push($cowTag,"Red1 Cherry Hill");
 
 $counter="5";
 array_push($image,"cow$counter.jpg");
@@ -123,14 +124,23 @@ array_push($cowId,$counter);
 array_push($cowTag,"Red1 Cherry Hill");
 
 
-$counter="16";
+$counter="17";
 array_push($image,"cow$counter.jpg");
 array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
 array_push($cowId,$counter);
 array_push($cowTag,"Red1 Cherry Hill");
 
+$counter="18";
+array_push($image,"cow$counter.jpg");
+array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+array_push($cowId,$counter);
+array_push($cowTag,"Red1 Cherry Hill");
 
-
+$counter="19";
+array_push($image,"cow$counter.jpg");
+array_push($text,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+array_push($cowId,$counter);
+array_push($cowTag,"Red1 Cherry Hill");
     //gets the size of the array-1 to get the number of valid items
       $numberCows= count($image)-1; 
         

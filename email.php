@@ -59,8 +59,8 @@ include ("index.html");
         <button  type="submit" name="submit">Send Email</button><br><br>
         <!--  end of form-->
     </form> 
-    <!-- button to go to previous page -->
-    <button onclick="goBack()">Go Back</button>
+    <!-- button to go back to catalog -->
+   <button> <a href="buyCows1.php" >Go Back to Catalog</a></button>
 
    
                  <!-- label for selected cows -->
@@ -163,11 +163,7 @@ else{
 
 }
 
-//go to the previous page
-function goBack() {
 
-  window.history.back();
-}
 
 </script>
 

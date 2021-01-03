@@ -65,15 +65,23 @@ if(mail($to, $subject, $message, $headers)){
     
     echo '<h1>Email to Robinson Farms sent successfully</h1>';
     echo '<button><a href="buyCows1.php">Return to Cow Selection</a href></button>';
-    
+   
+
 }
 //if a problem occurs notify user
 else{
     echo "Message was not able to be sent to Robinson Farms email.  Please try again in a moment or give us a call directly at 501-580-3461.<br>";
-    echo '<button><a href="email.php">Back</a href></button>';
+    echo '<button><a href="email.php">Back</a href></button>'; 
+
+  
+  echo'<script>localStorage.clear();</script>';
 }
 
     }
 
 
 ?>
+
+<script>
+
+    </script>

@@ -1,5 +1,7 @@
+
 <?php
 //removes watermark
+
 include ("index.html");
 ?>
 
