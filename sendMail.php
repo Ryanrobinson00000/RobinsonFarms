@@ -44,14 +44,9 @@ if(mail($to, $subject, $message, $headers)){
     echo '<h1>Sent Successfully.  You should receive a confirmation message to the email you sent.  We will process your request and get back with you as soon as possible.  If you need to contact us immediately feel free to call us at 501-580-3461</h1><br>';
     //returns to buycows page
     echo '<button><a href="buyCows1.php">Return to Cow Selection</a href></button>';
-}
-else{
-    //if mail is not sent properly notify user
-    echo "Message was not able to be sent to your email.  Please try again in a moment or give us a call directly at 501-580-3461.<br>";
-    //returns to email
-    echo '<button><a href="email.php">Back</a href></button>';
-}
-//sends email to customer
+
+    
+    //sends email to customer
 $to=$email;
 //email to customer subject
 $subject="Request Confirmation From Robinson Farms";
@@ -65,7 +60,7 @@ if(mail($to, $subject, $message, $headers)){
     
     echo '<h1>Email to Robinson Farms sent successfully</h1>';
     echo '<button><a href="buyCows1.php">Return to Cow Selection</a href></button>';
-   
+    echo'<script>localStorage.clear();</script>';
 
 }
 //if a problem occurs notify user
@@ -74,8 +69,17 @@ else{
     echo '<button><a href="email.php">Back</a href></button>'; 
 
   
-  echo'<script>localStorage.clear();</script>';
+
 }
+}
+else{
+    //if mail is not sent properly notify user
+    echo "Message was not able to be sent to your email.  Please try again in a moment or give us a call directly at 501-580-3461.<br>";
+    //returns to email
+    echo '<button><a href="email.php">Back</a href></button>';
+    
+}
+
 
     }
 
