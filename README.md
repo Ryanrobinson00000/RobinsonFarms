@@ -8,10 +8,10 @@ To see the live version of the website [click here](robinsonfarms.tk)
 1. About
 2.Functionality
 
-#About
+# About
 This website allows for a user to learn information about the company Robinson Farms.  They will be able to visit a home page, browse, select, and get information about available cattle via email, read information about the company, and obtain contact information for the various means to contact the company.The selling of cattle and calves is not a constant thing, instead there will be time periods where no cattle are available to be sold.  
 
-#Functionality
+# Functionality
 
 The requirements for functionality are as follows
 
